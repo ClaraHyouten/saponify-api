@@ -8,5 +8,16 @@
   "keywords": [],
   "author": "Clara Ortega",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.4.0",
+    "fastify": "^5.8.4",
+    "mysql2": "^3.20.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.2"
+  }
 }
