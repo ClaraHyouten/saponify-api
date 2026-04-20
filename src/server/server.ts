@@ -1,3 +1,4 @@
+const { recipeRoutes } = require('../modules/recipes/recipe.routes');
 const app = require('fastify')({
     logger: true
 });
@@ -5,6 +6,8 @@ const app = require('fastify')({
 app.get('/', async (request: any, reply: any) => {
     return { message: 'API running ✅' }
 });
+
+app.register(recipeRoutes);
 
 const start = async () => {
     try {
