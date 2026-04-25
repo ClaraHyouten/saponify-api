@@ -21,6 +21,8 @@ dist
 .env
 *.env
 .env.*
+# Ignore all .env files except the example one
+!.env.example
 
 # Local configuration that shouldn't be shared
 *.local
