@@ -1,3 +1,4 @@
+const env = require('../config/env');
 const { recipeRoutes } = require('../modules/recipes/recipe.routes');
 const app = require('fastify')({
     logger: true
@@ -11,7 +12,7 @@ app.register(recipeRoutes);
 
 const start = async () => {
     try {
-        await app.listen({ port: 3000, host: '::1' }, (error: any, address: string) => {
+        await app.listen({ port: env.PORT, host: '::1' }, (error: any, address: string) => {
             if (error) {
                 app.log.error(error);
                 process.exit(1);
